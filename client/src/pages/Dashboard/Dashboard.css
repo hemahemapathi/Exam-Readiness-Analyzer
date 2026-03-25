@@ -1,0 +1,128 @@
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard h1 {
+  color: #4f46e5;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: bold;
+  color: #4f46e5;
+}
+
+.chart-container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.exams-list {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.exams-list h3 {
+  margin-bottom: 20px;
+  color: #1f2937;
+  font-size: 20px;
+}
+
+.exams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding-top: 20px;
+  }
+
+  .dashboard h1 {
+    font-size: 30px !important;
+    margin-bottom: 15px;
+    margin-top: 0;
+    position: fixed;
+    top: 18px;
+    left: 15px;
+    z-index: 999;
+    background: #f9fafb;
+    padding-right: 60px;
+  }
+
+  .stat-card {
+    padding: 12px;
+  }
+
+  .stat-card h3 {
+    font-size: 11px;
+  }
+
+  .stat-value {
+    font-size: 20px;
+  }
+
+  .chart-container {
+    padding: 15px 5px;
+    margin: 0 0 15px 0;
+  }
+
+  .exams-list {
+    padding: 15px 5px;
+  }
+
+  .exams-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard h1 {
+    font-size: 18px;
+  }
+
+  .stat-card {
+    padding: 10px;
+  }
+
+  .stat-card h3 {
+    font-size: 10px;
+  }
+
+  .stat-value {
+    font-size: 18px;
+  }
+
+  .chart-container {
+    padding: 10px 3px;
+  }
+}

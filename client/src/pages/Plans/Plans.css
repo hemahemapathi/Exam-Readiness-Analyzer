@@ -1,0 +1,509 @@
+.plans-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.plans-page h1 {
+  color: #4f46e5;
+  margin-bottom: 32px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.exam-selector {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  border: 1px solid #e5e7eb;
+}
+
+.exam-selector label {
+  font-weight: 600;
+  color: #374151;
+  margin-right: 12px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.exam-selector select {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+  min-width: 200px;
+  width: 100%;
+}
+
+.exam-selector .desktop-select {
+  display: block;
+}
+
+.exam-selector .mobile-select {
+  display: none;
+  background: white;
+  border: 1px solid #d1d5db;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+.week-item {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.week-item h4 {
+  color: #1f2937;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.week-item p {
+  color: #6b7280;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.subjects {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subject-item {
+  background: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border-left: 3px solid #3b82f6;
+  font-size: 14px;
+  color: #374151;
+}
+
+.generate-section {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid #e5e7eb;
+}
+
+.generate-section h2 {
+  color: #374151;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.plan-options {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.plan-options select {
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  min-width: 150px;
+  flex: 1;
+}
+
+.plan-options button {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .plans-page {
+    padding: 15px;
+    padding-top: 80px;
+  }
+  
+  .plans-page h1 {
+    font-size: 30px !important;
+    margin-bottom: 15px;
+    margin-top: 0;
+    position: fixed;
+    top: 18px;
+    left: 15px;
+    z-index: 999;
+    background: #f9fafb;
+    padding-right: 60px;
+    font-weight: 600;
+  }
+  
+  .exam-selector {
+    margin-bottom: 32px;
+  }
+  
+  .exam-selector .desktop-select {
+    display: none;
+  }
+  
+  .exam-selector .mobile-select {
+    display: block;
+  }
+  
+  .plan-options {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .plan-options select {
+    min-width: auto;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  
+  .plan-options button {
+    width: 100%;
+    margin-top: 8px;
+  }
+  
+  .desktop-select {
+    display: none;
+  }
+  
+  .mobile-select {
+    display: block;
+  }
+}
+
+.plan-options button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.plan-options button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.plans-list h2 {
+  color: #374151;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.plan-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.plan-header h3 {
+  color: #1f2937;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.plan-date {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.plan-summary {
+  background: #f0f9ff;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.plan-summary p {
+  margin: 0;
+  color: #0369a1;
+  font-size: 14px;
+}
+
+.week-preview {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.week-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.week-header h4 {
+  color: #1f2937;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.week-hours {
+  background: #3b82f6;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.subjects-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.subject-tag {
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.more-subjects {
+  background: #f3f4f6;
+  color: #6b7280;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.plan-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.plan-info h3 {
+  margin: 0 0 4px 0;
+  color: #1f2937;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.plan-info p {
+  margin: 2px 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.view-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.view-btn:hover {
+  background: #2563eb;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #1f2937;
+}
+
+.close-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.close-btn:hover {
+  background: #dc2626;
+}
+
+.modal-body {
+  padding: 20px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.day-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+
+.day-item h4 {
+  margin: 0 0 8px 0;
+  color: #1f2937;
+  font-size: 14px;
+}
+
+.day-subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+/* Mobile Plan Type Selection */
+.desktop-select {
+  display: block;
+}
+
+.mobile-select {
+  display: none;
+  background: white;
+  border: 1px solid #d1d5db;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+  min-width: 150px;
+  flex: 1;
+}
+
+.plan-type-modal {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 90%;
+  max-width: 300px;
+  position: relative;
+  z-index: 1001;
+}
+
+.plan-type-modal h3 {
+  margin: 0 0 16px 0;
+  color: #1f2937;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.plan-type-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.plan-type-options button {
+  padding: 14px 16px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+  color: #374151;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.plan-type-options button:hover {
+  background: #f3f4f6;
+  border-color: #3b82f6;
+}
+
+.cancel-btn {
+  width: 100%;
+  padding: 12px;
+  background: #6b7280;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cancel-btn:hover {
+  background: #4b5563;
+}
+
+@media (max-width: 768px) {
+  .desktop-select {
+    display: none;
+  }
+  
+  .mobile-select {
+    display: block;
+  }
+}

@@ -1,0 +1,318 @@
+.study-sessions-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sessions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.study-sessions-page h1 {
+  color: #4f46e5;
+  margin: 0;
+  font-size: 32px;
+}
+
+.mobile-select-btn {
+  display: none;
+}
+
+.desktop-select {
+  display: block;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  align-items: flex-end;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px 20px 0 0;
+  padding: 25px;
+  width: 100%;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.modal-content h3 {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  color: #1f2937;
+  text-align: center;
+}
+
+.modal-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 15px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.modal-options button {
+  padding: 15px;
+  background: #f3f4f6;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modal-options button:hover {
+  background: #e5e7eb;
+  border-color: #3b82f6;
+}
+
+.modal-close {
+  width: 100%;
+  padding: 15px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.modal-actions .btn-danger {
+  flex: 1;
+  padding: 12px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.modal-actions .btn-danger:hover {
+  background: #dc2626;
+}
+
+.modal-actions .btn-secondary {
+  flex: 1;
+  padding: 12px;
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modal-actions .btn-secondary:hover {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+.study-sessions-page .list {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-color: #3b82f6;
+}
+
+.card h3 {
+  margin: 0 0 16px 0;
+  color: #1f2937;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card p {
+  margin: 10px 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-icon-edit {
+  background: linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 100%);
+  color: #0d0f10;
+  border: 1px solid #81d4fa;
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 16px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon-edit:hover {
+  background: linear-gradient(135deg, #0277bd 0%, #01579b 100%);
+  color: white;
+  border-color: #0277bd;
+}
+
+.btn-icon-danger {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  color: #080707;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon-danger:hover {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  color: white;
+  border-color: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .sessions-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .study-sessions-page {
+    padding-top: 50px;
+  }
+
+  .study-sessions-page h1 {
+    font-size: 30px !important;
+    margin-bottom: 15px;
+    margin-top: 0;
+    position: fixed;
+    top: 18px;
+    left: 15px;
+    z-index: 999;
+    background: #f9fafb;
+    padding-right: 60px;
+  }
+
+  .study-sessions-page .btn-primary {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .desktop-select {
+    display: none;
+  }
+
+  .mobile-select-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    text-align: left;
+    font-size: 14px;
+    color: #374151;
+    cursor: pointer;
+  }
+
+  .modal-overlay {
+    display: flex;
+  }
+
+  .study-sessions-page .list {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .study-sessions-page h1 {
+    font-size: 20px;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+
+  .modal-content h3 {
+    font-size: 16px;
+  }
+
+  .modal-options button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}

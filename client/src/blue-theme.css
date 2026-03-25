@@ -1,0 +1,60 @@
+/* Override all button and gradient colors to blue */
+button,
+.btn-primary,
+.btn-success,
+.btn-danger,
+.btn-calculate,
+.btn-simulate,
+.btn-plan,
+.btn-icon-danger,
+.auth-card button,
+.page > button,
+.form-card button,
+.card button,
+.view-details-btn,
+.sim-form button {
+  background: #3b82f6 !important;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3) !important;
+}
+
+button:hover,
+.btn-primary:hover,
+.btn-success:hover,
+.btn-danger:hover,
+.btn-calculate:hover,
+.btn-simulate:hover,
+.btn-plan:hover,
+.btn-icon-danger:hover,
+.auth-card button:hover,
+.page > button:hover,
+.form-card button:hover,
+.card button:hover,
+.view-details-btn:hover,
+.sim-form button:hover {
+  background: #2563eb !important;
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4) !important;
+}
+
+button:disabled,
+.btn-calculate:disabled,
+.btn-simulate:disabled,
+.btn-plan:disabled {
+  background: #9ca3af !important;
+}
+
+/* Override purple gradients */
+.user-info,
+.nav-item.active {
+  background: #3b82f6 !important;
+}
+
+.logout-btn {
+  background: #fef2f2 !important;
+  color: #dc2626 !important;
+  border: 1px solid #fecaca !important;
+}
+
+.logout-btn:hover {
+  background: #fee2e2 !important;
+  border-color: #fca5a5 !important;
+}

@@ -1,0 +1,399 @@
+.reports-page {
+  max-width: 100%;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.reports-header {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .reports-header {
+    margin-bottom: 0;
+  }
+}
+
+.reports-header h1 {
+  margin: 0;
+  color: #4f46e5;
+  font-size: 32px;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.btn-download {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+  white-space: nowrap;
+}
+
+.btn-download:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4);
+}
+
+.analytics-summary {
+  margin-bottom: 30px;
+}
+
+.summary-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s;
+  height: 100%;
+}
+
+.summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  border-color: #3b82f6;
+}
+
+.summary-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.summary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+  flex: 1;
+}
+
+.summary-label {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.summary-value {
+  font-size: 24px;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.charts-grid {
+  margin-bottom: 30px;
+}
+
+.chart-section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+  height: 100%;
+  overflow: hidden;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.chart-header h2 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 20px;
+}
+
+.period-selector {
+  display: flex;
+  gap: 8px;
+  background: #f3f4f6;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.period-btn {
+  padding: 8px 16px;
+  background: transparent;
+  color: #6b7280;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.period-btn:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.period-btn.active {
+  background: #3b82f6;
+  color: white;
+}
+
+.chart-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.records-section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.records-section h2 {
+  margin: 0 0 20px 0;
+  color: #1f2937;
+  font-size: 20px;
+}
+
+.records-table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.records-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.records-table thead {
+  background: #f9fafb;
+}
+
+.records-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+  border-bottom: 2px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.records-table td {
+  padding: 12px 16px;
+  color: #6b7280;
+  font-size: 14px;
+  border-bottom: 1px solid #f3f4f6;
+  white-space: nowrap;
+}
+
+.records-table tbody tr {
+  transition: all 0.2s;
+}
+
+.records-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.confidence-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #dbeafe;
+  color: #1e40af;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .reports-page {
+    padding: 0;
+  }
+
+  .reports-header h1 {
+    font-size: 30px !important;
+    margin-bottom: 15px;
+    margin-top: 0;
+    position: fixed;
+    top: 18px !important;
+    left: 15px;
+    z-index: 999;
+    background: #f9fafb;
+    padding-right: 60px;
+  }
+
+  .download-buttons {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .btn-download {
+    flex: 1;
+    justify-content: center;
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+
+  .summary-card {
+    padding: 15px;
+  }
+
+  .summary-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .summary-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .summary-label {
+    font-size: 11px;
+  }
+
+  .summary-value {
+    font-size: 20px;
+  }
+
+  .chart-section {
+    padding: 15px;
+  }
+
+  .chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .chart-header h2 {
+    font-size: 18px;
+  }
+
+  .period-selector {
+    width: 100%;
+  }
+
+  .period-btn {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .records-section {
+    padding: 15px;
+  }
+
+  .records-section h2 {
+    font-size: 18px;
+  }
+
+  .records-table {
+    font-size: 12px;
+  }
+
+  .records-table th,
+  .records-table td {
+    padding: 10px 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .reports-header h1 {
+    font-size: 20px;
+  }
+
+  .btn-download {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .summary-card {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .summary-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .summary-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .summary-label {
+    font-size: 10px;
+  }
+
+  .summary-value {
+    font-size: 18px;
+  }
+
+  .chart-section {
+    padding: 12px;
+  }
+
+  .chart-header h2 {
+    font-size: 16px;
+  }
+
+  .period-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .records-section {
+    padding: 12px;
+  }
+
+  .records-section h2 {
+    font-size: 16px;
+  }
+
+  .records-table {
+    font-size: 11px;
+  }
+
+  .records-table th,
+  .records-table td {
+    padding: 8px 6px;
+  }
+
+  .confidence-badge {
+    padding: 3px 8px;
+    font-size: 11px;
+  }
+}
